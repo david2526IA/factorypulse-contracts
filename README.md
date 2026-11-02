@@ -68,4 +68,4 @@ validate_event("telemetry.v1", event)
 
 ## License
 
-MIT © 2026 David Falcon
+MIT © 2026 David
