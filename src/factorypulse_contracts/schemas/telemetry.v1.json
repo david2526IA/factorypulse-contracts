@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/david2526IA/factorypulse-contracts/schemas/telemetry.v1.json",
+  "title": "FactoryPulse telemetry v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "schema_version", "occurred_at", "asset_id", "measurements"],
+  "properties": {
+    "event_id": {"type": "string", "format": "uuid"},
+    "event_type": {"const": "factorypulse.telemetry"},
+    "schema_version": {"const": "1.0"},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "asset_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]{2,63}$"},
+    "measurements": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "number"},
+      "properties": {
+        "temperature_c": {"type": "number", "minimum": -40, "maximum": 200},
+        "vibration_mm_s": {"type": "number", "minimum": 0, "maximum": 100},
+        "pressure_bar": {"type": "number", "minimum": 0, "maximum": 500},
+        "power_kw": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "source": {"type": "string", "maxLength": 128}
+  }
+}

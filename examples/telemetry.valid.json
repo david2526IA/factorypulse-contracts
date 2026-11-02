@@ -1,0 +1,9 @@
+{
+  "event_id": "42b9c84e-1770-4f3f-971e-014e4aaf1df7",
+  "event_type": "factorypulse.telemetry",
+  "schema_version": "1.0",
+  "occurred_at": "2026-11-02T12:00:00Z",
+  "asset_id": "PUMP-01",
+  "measurements": {"temperature_c": 63.2, "vibration_mm_s": 2.8, "pressure_bar": 7.4, "power_kw": 18.1},
+  "source": "simulator-v1"
+}

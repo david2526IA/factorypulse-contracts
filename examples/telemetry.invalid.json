@@ -1,0 +1,8 @@
+{
+  "event_id": "not-a-uuid",
+  "event_type": "factorypulse.telemetry",
+  "schema_version": "1.0",
+  "occurred_at": "2026-11-02T12:00:00Z",
+  "asset_id": "pump 01",
+  "measurements": {"temperature_c": 999}
+}

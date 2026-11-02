@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/david2526IA/factorypulse-contracts/schemas/data-quality.v1.json",
+  "title": "FactoryPulse data quality v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "schema_version", "occurred_at", "pipeline", "accepted_rows", "rejected_rows"],
+  "properties": {
+    "event_id": {"type": "string", "format": "uuid"},
+    "event_type": {"const": "factorypulse.data_quality"},
+    "schema_version": {"const": "1.0"},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "pipeline": {"type": "string", "minLength": 1},
+    "accepted_rows": {"type": "integer", "minimum": 0},
+    "rejected_rows": {"type": "integer", "minimum": 0},
+    "run_ref": {"type": "string"}
+  }
+}
